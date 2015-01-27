@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Dive into Graphite and Grafana</title>
+	<title>Dive Into Graphite And Grafana</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -18,11 +18,11 @@
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>Dive into Graphite and Grafana</h1>
+		<h1>Dive Into Graphite And Grafana</h1>
 		<p><a href="https://dentrifonov.github.io" title="Denis Trifonov Home Page">Denis Trifonov</a>, <a href="http://2gis.ru" title="2GIS City Map">2GIS</a></p>
 	</header>
 	<section class="slide cover" id="title"><div>
-		<h2>Dive into Graphite<br>and Grafana</h2>
+		<h2>Dive Into Graphite<br>And Grafana</h2>
 		<p>Denis Trifonov</p>
 		<img src="pictures/2gis-cover.png" alt="2GIS Logo">
 		<style>
@@ -46,7 +46,7 @@
 	<section class="slide"><div>
 		<h2>About organization</h2>
 		<ul><a href="http://info.2gis.com/" title="2GIS Company Site">2GIS</a> is a free business listings with a city map:
-			<li>Most detailed city map</li>
+			<li>The most detailed maps</li>
 			<li>Contact details of all organizations</li>
 			<li>Public transport routes</li>
 		</ul>
@@ -56,7 +56,7 @@
 		<ul>
 			<li>WebAPI</li>
 			<li>Photo</li>
-			<li>Auth</li>
+			<li>Authentication</li>
 			<li>Push2Dial</li>
 			<li>Personal account</li>
 			<li>Others</li>
@@ -64,7 +64,7 @@
 	</div></section>
 	<section class="slide"><div>
 		<h2>Load Testing</h2>
-		<p>Previously we used only Yandex.Tank for generating load, and console output and built-in reports for analyzing</p>
+		<p>Previously we generated load by Yandex.Tank. Also we used it's console output and built-in reports for analysis.</p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Problems</h2>
@@ -108,7 +108,7 @@
 	</div></section>
 	<section class="slide"><div>
 		<h2>Yandex.Tank and Graphite</h2>
-		<p>Yandex.Tank has a built-in Graphite support. Graphite &mdash; an enterprise-scale monitoring tool, use it to store your test results and render graphs.</p>
+		<p>Graphite &mdash; enterprise-scale monitoring tool for metrics store and graphs rendering. Yandex.Tank has a built-in Graphite support.</p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Graphite Components</h2>
@@ -120,11 +120,11 @@
 	</div></section>
 	<section class="slide"><div>
 		<h2>Carbon</h2>
-		<p>Carbon is responsible for receiving metrics over the network, caching them in memory for "hot queries" from the Graphite-Web application, and persisting them to disk using the Whisper or Ceres time-series library</p>
+		<p>Carbon is receiving metrics over the network, caching them in memory for “hot queries” from the Graphite-Web application, and persisting them to disk using the Whisper or Ceres time-series library</p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Carbon Pipeline</h2>
-		<ul>Pipeline defines what the carbon daemon does with metric data it receives or generates. Generally there are two behaviors: to relay the data on to other carbon daemons, or to write the data to disk. There are a few optional processing features:
+		<ul>Pipeline defines what the carbon daemon do with metric data they receive or generate. In general there are two typical behaviours: redirect data to other Carbon daemon or write data on disk. There are a few optional processing features:
 			<li>Aggregate</li>
 			<li>Filter</li>
 			<li>Rewrite</li>
@@ -177,7 +177,7 @@
 		</style>
 	</div></section>
 	<section class="slide"><div>
-		<h2>Installation</h2>
+		<h2>Setup</h2>
 		<ul>
 			<li>Official documentation <a href="http://graphite.readthedocs.org/en/latest/index.html" title="Graphite Documentation">graphite.readthedocs.org/en/latest/index.html</a></li>
 			<li>Carbon Ansible role <a href="https://gitlab.2gis.local/ansible/carbon/" title="Carbon Ansible Role">gitlab.2gis.local/ansible/carbon</a></li>
@@ -241,7 +241,7 @@ CARBONLINK_HOSTS = ['127.0.0.1:7002:cache0']
 	</div></section>
 	<section class="slide"><div>
 		<h2>Scaling</h2>
-		<p>You may add more carbon-cache daemons for fully utilizing CPU resources and disk IO on same node, add new graphite nodes to cluster and top-level carbon-relay daemons (or aggregation layer), setup replication and other. It all depends on your needs.</p>
+		<p>You may add more Carbon cache daemons for full utilization of CPU resources and disk IO on same node, add new Graphite nodes to cluster and top-level Carbon relay daemons (or aggregation layer), setup replication and other. It's up on you.</p>
 	</div></section>
 	<section class="slide cover" id="graphite-cluster-2"><div>
 		<img src="pictures/graphite-cluster-2.jpg" alt="Graphite cluster with two nodes">
@@ -280,8 +280,8 @@ CARBONLINK_HOSTS = ['127.0.0.1:7002:cache0']
 		<h2>Summary</h2>
 		<ul>
 			<li>Try Graphite if you need tool for store billions metrics and getting them from UI or API</li>
-			<li>Graphite is easy to scaling up</li>
-			<li>Many tools that work with Graphite <a href="http://graphite.readthedocs.org/en/latest/tools.html" title="Tools That Work With Graphite">graphite.readthedocs.org/en/latest/tools.html</a></li>
+			<li>Graphite is easy to scale</li>
+			<li>Plenty of tools work with Graphite <a href="http://graphite.readthedocs.org/en/latest/tools.html" title="Tools That Work With Graphite">graphite.readthedocs.org/en/latest/tools.html</a></li>
 		</ul>
 	</div></section>
 	<section class="slide shout" id="grafana"><div>
@@ -376,7 +376,7 @@ CARBONLINK_HOSTS = ['127.0.0.1:7002:cache0']
 	<section class="slide"><div>
 		<h2>Summary</h2>
 		<ul>
-			<li>Try Grafana if you need more features for working with graphs and dashboards</li>
+			<li>Try Grafana if you need more features to manipulate with graphs and dashboards</li>
 			<li>Use templated and scripted dashboards for building dynamic dashboards and reports</li>
 			<li>Use Grafana if you like Kibana :)</li>
 			<li>Grafana 2.0 and the future <a href="http://grafana.org/blog/2015/01/12/grafana2-the-future-and-raintank.html" title="Grafana 2.0 and the Future">grafana.org/blog/2015/01/12/grafana2-the-future-and-raintank.html</a></li>
